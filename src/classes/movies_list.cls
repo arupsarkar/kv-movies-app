@@ -4,5 +4,7 @@ public with sharing class movies_list {
 		init();
 	}
 
-	void init();
+	private void init(){
+
+	}
 }

@@ -30,3 +30,8 @@ at the time of documenting this setup the version of available was [MavensMate-D
 ###### cci task run retrieve_src --org dev
 ###### cci task run retrieve_packaged --org dev
 ###### cci task run deploy --org dev
+
+
+### Salesforce DX IDE
+1. ** [VS Code](https://code.visualstudio.com/)
+2. ** [Salesforce DX Extension](https://marketplace.visualstudio.com/items?itemName=salesforce.salesforcedx-vscode)

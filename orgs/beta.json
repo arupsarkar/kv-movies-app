@@ -1,0 +1,10 @@
+{
+  "orgName": "kv_movies - Beta Test Org",
+  "edition": "Developer",
+  "orgPreferences" : {
+    "enabled": [
+      "S1DesktopEnabled",
+      "ChatterEnabled"
+    ]
+  }
+}

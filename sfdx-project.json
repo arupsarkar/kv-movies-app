@@ -1,1 +1,20 @@
-{"sourceApiVersion": "42.0", "packageDirectories": [{"default": true, "path": "force-app"}], "namespace": null}
+{
+    "sourceApiVersion": "42.0",
+    "packageDirectories": [
+        {
+            "default": true,
+            "path": "src"
+        },
+        {
+            "path": "packaged",
+            "package": "kv_movies",
+            "versionName": "ver 0.1",
+            "versionNumber": "0.1.0.NEXT",
+            "default": false
+        }
+    ],
+    "namespace": null,
+    "packageAliases": {
+        "kv_movies": "0Hof2000000XZAbCAO"
+    }
+}

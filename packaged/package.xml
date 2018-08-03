@@ -6,7 +6,22 @@
         <name>ApexClass</name>
     </types>
     <types>
+        <members>Poster_Image</members>
+        <name>AuraDefinitionBundle</name>
+    </types>
+    <types>
+        <members>OldMovies_icon</members>
+        <name>ContentAsset</name>
+    </types>
+    <types>
+        <members>Movies</members>
+        <name>CustomApplication</name>
+    </types>
+    <types>
+        <members>Movie__c.Overview__c</members>
+        <members>Movie__c.Poster__c</members>
         <members>Movie__c.Rating__c</members>
+        <members>Movie__c.Status__c</members>
         <name>CustomField</name>
     </types>
     <types>
@@ -16,6 +31,11 @@
     <types>
         <members>Movie__c</members>
         <name>CustomTab</name>
+    </types>
+    <types>
+        <members>Movies_List</members>
+        <members>Movies_UtilityBar</members>
+        <name>FlexiPage</name>
     </types>
     <types>
         <members>Movie__c-Movie Layout</members>

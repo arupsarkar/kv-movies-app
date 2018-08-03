@@ -38,7 +38,11 @@
     </actionOverrides>
     <actionOverrides>
         <actionName>View</actionName>
-        <type>Default</type>
+        <comment>Action override created by Lightning App Builder during activation.</comment>
+        <content>Movies_List</content>
+        <formFactor>Large</formFactor>
+        <skipRecordTypeSelect>false</skipRecordTypeSelect>
+        <type>Flexipage</type>
     </actionOverrides>
     <allowInChatterGroups>true</allowInChatterGroups>
     <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
@@ -53,6 +57,30 @@
     <enableSearch>true</enableSearch>
     <enableSharing>true</enableSharing>
     <enableStreamingApi>true</enableStreamingApi>
+    <fields>
+        <fullName>Overview__c</fullName>
+        <description>Brief description about the movie.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Brief description about the movie.</inlineHelpText>
+        <label>Overview</label>
+        <length>32768</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>5</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Poster__c</fullName>
+        <externalId>false</externalId>
+        <formula>IMAGE(&quot;https://image.tmdb.org/t/p/w500/kqjL17yufvn9OVLyXYpvtyrFfak.jpg&quot;, &quot;Flower&quot;, 300, 300)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Poster</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
     <fields>
         <fullName>Rating__c</fullName>
         <description>Visual representation of how popular the movie is from a scale of 1 to 10. 1 being lowest and 10 being highest.</description>
@@ -116,6 +144,33 @@
                     <fullName>10</fullName>
                     <default>false</default>
                     <label>10</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Status__c</fullName>
+        <description>This field will indicate if the movie is released for general viewing.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>This field will indicate if the movie is released for general viewing.</inlineHelpText>
+        <label>Status</label>
+        <required>true</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Released</fullName>
+                    <default>false</default>
+                    <label>Released</label>
+                </value>
+                <value>
+                    <fullName>Not Released</fullName>
+                    <default>false</default>
+                    <label>Not Released</label>
                 </value>
             </valueSetDefinition>
         </valueSet>

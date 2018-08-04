@@ -1,4 +1,9 @@
-config/*
+config/.debug
+config/.describe
+config/.lightning
+config/.local_store
+config/.org_metadata
+config/.settings
 kv-movies-app.sublime-project
 kv-movies-app.sublime-workspace
 .sfdx

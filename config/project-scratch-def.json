@@ -1,0 +1,12 @@
+{
+    "orgName": "kv_movies - Dev Org",
+    "country": "US",
+    "edition": "Developer",
+    "description": "",
+    "hasSampleData": "true",
+    "features": ["MultiCurrency", "AuthorApex"],
+    "orgPreferences": {
+      "enabled": ["S1DesktopEnabled", "ChatterEnabled"],
+      "disabled": ["IsNameSuffixEnabled"]
+    }
+  }

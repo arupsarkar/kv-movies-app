@@ -2,7 +2,13 @@
 <Package xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>kv_movies</fullName>
     <types>
-        <members>movies_list</members>
+        <members>GetLatestMoviesInjector</members>
+        <members>GetLatestMoviesServiceImpl</members>
+        <members>MoviesApplication</members>
+        <members>MoviesConsumer</members>
+        <members>MoviesService</members>
+        <members>MoviesServiceDI_TEST</members>
+        <members>MoviesServiceInjector</members>
         <name>ApexClass</name>
     </types>
     <types>

@@ -3,3 +3,4 @@ kv-movies-app.sublime-project
 kv-movies-app.sublime-workspace
 .sfdx
 .vscode
+.DS_Store

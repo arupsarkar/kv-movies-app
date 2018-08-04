@@ -1,4 +1,7 @@
 # kv-movies-app
+
+[![Build Status](https://travis-ci.org/arupsarkar/kv-movies-app.svg?branch=master)]
+
 Salesforce Movies App
 
 Development Workflow using **CumulusCI**

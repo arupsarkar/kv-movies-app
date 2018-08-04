@@ -9,5 +9,5 @@ project:
         prefix_beta: beta/
         prefix_release: release/
     test:
-        name_match: _TEST%
+        name_match: '%_TEST%'
     

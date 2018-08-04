@@ -9,3 +9,5 @@ kv-movies-app.sublime-workspace
 .sfdx
 .vscode
 .DS_Store
+test_results.json
+test_results.xml

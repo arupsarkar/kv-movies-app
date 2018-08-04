@@ -9,6 +9,7 @@
         <members>MoviesService</members>
         <members>MoviesServiceDI_TEST</members>
         <members>MoviesServiceInjector</members>
+        <members>movies_list</members>
         <name>ApexClass</name>
     </types>
     <types>

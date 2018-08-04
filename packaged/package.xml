@@ -18,6 +18,7 @@
         <name>CustomApplication</name>
     </types>
     <types>
+        <members>Movie__c.Homepage__c</members>
         <members>Movie__c.Overview__c</members>
         <members>Movie__c.Poster__c</members>
         <members>Movie__c.Rating__c</members>

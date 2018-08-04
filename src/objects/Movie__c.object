@@ -58,6 +58,17 @@
     <enableSharing>true</enableSharing>
     <enableStreamingApi>true</enableStreamingApi>
     <fields>
+        <fullName>Homepage__c</fullName>
+        <description>Link to the homepage of the movie.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Link to the homepage of the movie.</inlineHelpText>
+        <label>Homepage</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Url</type>
+    </fields>
+    <fields>
         <fullName>Overview__c</fullName>
         <description>Brief description about the movie.</description>
         <externalId>false</externalId>

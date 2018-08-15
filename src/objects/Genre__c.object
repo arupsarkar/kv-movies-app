@@ -58,7 +58,7 @@
         <description>Unique genre id.</description>
         <externalId>false</externalId>
         <inlineHelpText>Unique genre id.</inlineHelpText>
-        <label>genre id</label>
+        <label>Id</label>
         <precision>18</precision>
         <required>false</required>
         <scale>0</scale>

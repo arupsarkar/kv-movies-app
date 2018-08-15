@@ -17,10 +17,6 @@
         <name>ApexClass</name>
     </types>
     <types>
-        <members>Poster_Image</members>
-        <name>AuraDefinitionBundle</name>
-    </types>
-    <types>
         <members>OldMovies_icon</members>
         <name>ContentAsset</name>
     </types>
@@ -61,7 +57,6 @@
         <name>CustomTab</name>
     </types>
     <types>
-        <members>Movies_List</members>
         <members>Movies_UtilityBar</members>
         <name>FlexiPage</name>
     </types>

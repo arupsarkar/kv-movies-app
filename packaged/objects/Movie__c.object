@@ -186,6 +186,169 @@
             </valueSetDefinition>
         </valueSet>
     </fields>
+    <fields>
+        <fullName>adult__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Indicates if the movie belongs to adult category.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Indicates if the movie belongs to adult category.</inlineHelpText>
+        <label>adult</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>backdrop_path__c</fullName>
+        <description>Backdrop image of the movie.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Backdrop image of the movie.</inlineHelpText>
+        <label>backdrop path</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>movie_id__c</fullName>
+        <description>Unique movie id.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Unique movie id.</inlineHelpText>
+        <label>Id</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>original_language__c</fullName>
+        <description>Original language of the movie.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Original language of the movie.</inlineHelpText>
+        <label>Original Language</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>original_title__c</fullName>
+        <description>Original title of the movie.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Original title of the movie.</inlineHelpText>
+        <label>original title</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>popular_movies__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Boolean indicator of the data category.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Boolean indicator of the data category.</inlineHelpText>
+        <label>popular movies</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>popularity__c</fullName>
+        <description>Popularity of the movie.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Popularity of the movie.</inlineHelpText>
+        <label>popularity</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>4</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>poster_path__c</fullName>
+        <description>Relative path of the poster.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Relative path of the poster.</inlineHelpText>
+        <label>poster path</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>release_date__c</fullName>
+        <description>Release date of the movie.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Release date of the movie.</inlineHelpText>
+        <label>release date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>title__c</fullName>
+        <description>Title of the movie.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Title of the movie.</inlineHelpText>
+        <label>title</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>video__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Indicate if this movie is a video.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Indicate if this movie is a video.</inlineHelpText>
+        <label>video</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>vote_average__c</fullName>
+        <description>Average vote.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Average vote.</inlineHelpText>
+        <label>vote average</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>4</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>vote_count__c</fullName>
+        <description>Total number of votes.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Total number of votes.</inlineHelpText>
+        <label>vote count</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
     <label>Movie</label>
     <listViews>
         <fullName>All</fullName>

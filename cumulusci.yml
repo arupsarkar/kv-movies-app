@@ -4,8 +4,6 @@ project:
         name:  kv_movies
         namespace: kv_movies
         api_version: '42.0'
-        install_class: None
-        uninstall_class: None        
     git: 
         default_branch: master
         prefix_feature: feature/

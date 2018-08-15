@@ -4,11 +4,16 @@
     <types>
         <members>GetLatestMoviesInjector</members>
         <members>GetLatestMoviesServiceImpl</members>
+        <members>GetPopularMoviesInjector</members>
+        <members>GetPopularMoviesServiceImpl</members>
         <members>MoviesApplication</members>
         <members>MoviesConsumer</members>
         <members>MoviesService</members>
         <members>MoviesServiceDI_TEST</members>
         <members>MoviesServiceInjector</members>
+        <members>MoviesTestUtil</members>
+        <members>PopularMovies</members>
+        <members>PopularMovies_TEST</members>
         <name>ApexClass</name>
     </types>
     <types>
@@ -24,18 +29,34 @@
         <name>CustomApplication</name>
     </types>
     <types>
+        <members>Genre__c.genre_id__c</members>
         <members>Movie__c.Homepage__c</members>
         <members>Movie__c.Overview__c</members>
         <members>Movie__c.Poster__c</members>
         <members>Movie__c.Rating__c</members>
         <members>Movie__c.Status__c</members>
+        <members>Movie__c.adult__c</members>
+        <members>Movie__c.backdrop_path__c</members>
+        <members>Movie__c.movie_id__c</members>
+        <members>Movie__c.original_language__c</members>
+        <members>Movie__c.original_title__c</members>
+        <members>Movie__c.popular_movies__c</members>
+        <members>Movie__c.popularity__c</members>
+        <members>Movie__c.poster_path__c</members>
+        <members>Movie__c.release_date__c</members>
+        <members>Movie__c.title__c</members>
+        <members>Movie__c.video__c</members>
+        <members>Movie__c.vote_average__c</members>
+        <members>Movie__c.vote_count__c</members>
         <name>CustomField</name>
     </types>
     <types>
+        <members>Genre__c</members>
         <members>Movie__c</members>
         <name>CustomObject</name>
     </types>
     <types>
+        <members>Genre__c</members>
         <members>Movie__c</members>
         <name>CustomTab</name>
     </types>
@@ -45,12 +66,19 @@
         <name>FlexiPage</name>
     </types>
     <types>
+        <members>Genre__c-Genre Layout</members>
         <members>Movie__c-Movie Layout</members>
         <name>Layout</name>
     </types>
     <types>
+        <members>Genre__c.All</members>
         <members>Movie__c.All</members>
         <name>ListView</name>
+    </types>
+    <types>
+        <members>Movies App Standard User</members>
+        <members>Movies App System Administrator</members>
+        <name>Profile</name>
     </types>
     <version>42.0</version>
 </Package>

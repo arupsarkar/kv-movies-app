@@ -14,6 +14,7 @@
     <tabs>standard-Feed</tabs>
     <tabs>Movie__c</tabs>
     <tabs>standard-Contact</tabs>
+    <tabs>Genre__c</tabs>
     <uiType>Lightning</uiType>
     <utilityBar>Movies_UtilityBar</utilityBar>
 </CustomApplication>

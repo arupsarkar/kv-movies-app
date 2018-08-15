@@ -16,5 +16,6 @@
     "packageAliases": {
         "kv_movies": "0Hof2000000XZAbCAO"
     },
-    "namespace": "kv_movies"
+    "namespace": "kv_movies",
+    "oauthLocalPort" : "1717"
 }

@@ -11,3 +11,6 @@ kv-movies-app.sublime-workspace
 .DS_Store
 test_results.json
 test_results.xml
+node_modules
+package.json
+package-lock.json

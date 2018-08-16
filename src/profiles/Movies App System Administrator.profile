@@ -14,12 +14,24 @@
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
+        <apexClass>GetNowPlayingMoviesInjector</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>GetNowPlayingMoviesServiceImpl</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
         <apexClass>GetPopularMoviesInjector</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
         <apexClass>GetPopularMoviesServiceImpl</apexClass>
         <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>Movies</apexClass>
+        <enabled>false</enabled>
     </classAccesses>
     <classAccesses>
         <apexClass>MoviesApplication</apexClass>
@@ -43,6 +55,10 @@
     </classAccesses>
     <classAccesses>
         <apexClass>MoviesTestUtil</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>Movies_TEST</apexClass>
         <enabled>false</enabled>
     </classAccesses>
     <classAccesses>

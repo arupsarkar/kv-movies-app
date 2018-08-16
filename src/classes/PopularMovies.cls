@@ -1,4 +1,4 @@
-public with sharing class PopularMovies{
+public class PopularMovies{
 
 	public Integer page;
 	public Integer total_results;

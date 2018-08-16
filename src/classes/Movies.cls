@@ -1,4 +1,4 @@
-public class PopularMovies{
+public class Movies {
 
 	public Integer page;
 	public Integer total_results;
@@ -22,7 +22,7 @@ public class PopularMovies{
 		public String release_date;
 	}
 
-	public static PopularMovies parse(String json) {
-		return (PopularMovies) System.JSON.deserialize(json, PopularMovies.class);
-	}
+	public static Movies parse(String json) {
+		return (Movies) System.JSON.deserialize(json, Movies.class);
+	}    
 }

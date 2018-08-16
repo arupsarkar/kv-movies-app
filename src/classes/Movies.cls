@@ -4,7 +4,8 @@ public class Movies {
 	public Integer total_results;
 	public Integer total_pages;
 	public List<Results> results;
-
+	public Dates dates;
+		
 	public class Results {
 		public Integer vote_count;
 		public Integer id;
@@ -20,7 +21,14 @@ public class Movies {
 		public Boolean adult;
 		public String overview;
 		public String release_date;
+
 	}
+
+	public class Dates {
+		public String maximum;
+		public String minimum;
+	}
+
 
 	public static Movies parse(String json) {
 		return (Movies) System.JSON.deserialize(json, Movies.class);

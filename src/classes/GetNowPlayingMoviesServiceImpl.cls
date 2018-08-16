@@ -10,6 +10,8 @@ public with sharing class GetNowPlayingMoviesServiceImpl extends MoviesService{
     //List to capture the genres from the API.
     List<Integer> genreIds = new List<Integer>();
     String genreData = '';
+    Date nowPlayingStartDate;
+    Date nowPlayingEndDate;
 
     public override String GetMovies(){
 
@@ -31,6 +33,7 @@ public with sharing class GetNowPlayingMoviesServiceImpl extends MoviesService{
             Map<String, Object> results = (Map<String, Object>) JSON.deserializeUntyped(res.getBody());
             //get the total number of pages to query.
             for(String key : results.keySet()){
+                System.debug(LoggingLevel.DEBUG, 'key = ' + key);
                 if(key.equals('total_pages')){
                     System.debug(LoggingLevel.DEBUG, 'Total number of pages = ' + results.get(key));
                 }
@@ -49,9 +52,13 @@ public with sharing class GetNowPlayingMoviesServiceImpl extends MoviesService{
             request.setTimeout(60000);
             HttpResponse response = new Http().send(request);
             Movies movies = Movies.parse(response.getBody());
+            System.debug(LoggingLevel.DEBUG, 'Minimum Date = ' + String.valueOf(movies.dates.minimum));            
+            System.debug(LoggingLevel.DEBUG, 'Maximum Date = ' + String.valueOf(movies.dates.maximum));                        
+            nowPlayingStartDate = Date.valueOf(movies.dates.minimum);
+            nowPlayingEndDate = Date.valueOf(movies.dates.maximum);
             for(Movies.Results result : movies.results){
                 moviesList.add(result);
-            } 
+            }
             System.debug(LoggingLevel.DEBUG, moviesList.size());                       
         }
 
@@ -93,7 +100,8 @@ public with sharing class GetNowPlayingMoviesServiceImpl extends MoviesService{
                 System.debug(LoggingLevel.DEBUG, genreData);
             }
             movie.Genre__c = genreData;
-
+            movie.now_playing_start_date__c = nowPlayingStartDate;
+            movie.now_playing_end_date__c = nowPlayingEndDate;
             System.debug(LoggingLevel.DEBUG, data.id);
             System.debug(LoggingLevel.DEBUG, data.overview);
             System.debug(LoggingLevel.DEBUG, data.poster_path);

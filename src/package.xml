@@ -26,6 +26,8 @@
     </types>
     <types>
         <members>Genre__c.genre_id__c</members>
+        <members>Movie__c.Backdrop__c</members>
+        <members>Movie__c.Genre__c</members>
         <members>Movie__c.Homepage__c</members>
         <members>Movie__c.Overview__c</members>
         <members>Movie__c.Poster__c</members>
@@ -68,6 +70,7 @@
     <types>
         <members>Genre__c.All</members>
         <members>Movie__c.All</members>
+        <members>Movie__c.Popular_Movies</members>
         <name>ListView</name>
     </types>
     <types>

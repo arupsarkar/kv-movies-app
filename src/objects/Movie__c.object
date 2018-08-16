@@ -54,6 +54,32 @@
     <enableSharing>true</enableSharing>
     <enableStreamingApi>true</enableStreamingApi>
     <fields>
+        <fullName>Backdrop__c</fullName>
+        <externalId>false</externalId>
+        <formula>IMAGE(&quot;https://image.tmdb.org/t/p/w500&quot; + backdrop_path__c, &apos;Backdrop&apos;)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Backdrop</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Genre__c</fullName>
+        <description>Genre of the movie</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Genre of the movie</inlineHelpText>
+        <label>Genre</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
         <fullName>Homepage__c</fullName>
         <description>Link to the homepage of the movie.</description>
         <externalId>false</externalId>
@@ -81,7 +107,7 @@
     <fields>
         <fullName>Poster__c</fullName>
         <externalId>false</externalId>
-        <formula>IMAGE(&quot;https://image.tmdb.org/t/p/w500&quot; + poster_path__c, &quot;Poster&quot;, 300, 300)</formula>
+        <formula>IMAGE(&quot;https://image.tmdb.org/t/p/w500&quot; + poster_path__c, &quot;Poster&quot;)</formula>
         <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
         <label>Poster</label>
         <required>false</required>
@@ -273,13 +299,14 @@
         <externalId>false</externalId>
         <inlineHelpText>Popularity of the movie.</inlineHelpText>
         <label>Popularity</label>
-        <precision>18</precision>
+        <precision>16</precision>
         <required>false</required>
-        <scale>4</scale>
+        <scale>2</scale>
         <trackFeedHistory>false</trackFeedHistory>
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
-        <type>Currency</type>
+        <type>Number</type>
+        <unique>false</unique>
     </fields>
     <fields>
         <fullName>poster_path__c</fullName>
@@ -339,13 +366,14 @@
         <externalId>false</externalId>
         <inlineHelpText>Average vote.</inlineHelpText>
         <label>Vote Average</label>
-        <precision>18</precision>
+        <precision>16</precision>
         <required>false</required>
-        <scale>4</scale>
+        <scale>2</scale>
         <trackFeedHistory>false</trackFeedHistory>
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
-        <type>Currency</type>
+        <type>Number</type>
+        <unique>false</unique>
     </fields>
     <fields>
         <fullName>vote_count__c</fullName>
@@ -371,12 +399,22 @@
         <columns>vote_average__c</columns>
         <columns>release_date__c</columns>
         <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+    <listViews>
+        <fullName>Popular_Movies</fullName>
+        <columns>NAME</columns>
+        <columns>vote_count__c</columns>
+        <columns>popularity__c</columns>
+        <columns>vote_average__c</columns>
+        <columns>release_date__c</columns>
+        <filterScope>Everything</filterScope>
         <filters>
             <field>popular_movies__c</field>
             <operation>equals</operation>
             <value>1</value>
         </filters>
-        <label>All</label>
+        <label>Popular Movies</label>
     </listViews>
     <nameField>
         <label>Movie Name</label>

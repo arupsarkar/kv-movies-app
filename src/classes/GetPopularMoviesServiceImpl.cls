@@ -2,6 +2,15 @@ public with sharing class GetPopularMoviesServiceImpl extends MoviesService{
     string result{get; private set;}
     List<PopularMovies.Results> moviesList = new List<PopularMovies.Results>();
     List<Movie__c> popularMoviesList = new List<Movie__c>();
+    final Integer PAGES = 10;
+    //get a list of all genres to decode fromthe API.
+    List<Genre__c> genreList = [SELECT Id, Name, Genre_Id__c from Genre__c];
+    Map<Decimal, String> genreMap = new Map<Decimal, String>();
+    //List to capture the genres from the API.
+    List<Integer> genreIds = new List<Integer>();
+    String genreData = '';
+
+
 
     public override String GetMovies(){
         System.debug(System.LoggingLevel.DEBUG, 'GetPopularMovies.GetMovies()');
@@ -18,26 +27,33 @@ public with sharing class GetPopularMoviesServiceImpl extends MoviesService{
         HttpResponse res = new Http().send(req);
         // If the request is successful, parse the JSON response.
         if(res.getStatusCode() == 200){
-            // // Deserialize the JSON string into collections of primitive data types.
-            // Map<String, Object> results = (Map<String, Object>) JSON.deserializeUntyped(res.getBody());
-            // for(String key : results.keySet()){
-            //     System.debug(LoggingLevel.DEBUG, '' + key);
-            //     System.debug(LoggingLevel.DEBUG, results.get(key));
-            //     if(key.equals('results')){
-            //         PopularMovies movie = PopularMovies.parse(results.get(key));
-            //         System.debug(LoggingLevel.DEBUG, movie.results);
-            //     }
-            // }
-            PopularMovies movies = PopularMovies.parse(res.getBody());
-            for(PopularMovies.Results result : movies.results){
-                moviesList.add(result);
+            // Deserialize the JSON string into collections of primitive data types.
+            Map<String, Object> results = (Map<String, Object>) JSON.deserializeUntyped(res.getBody());
+            //get the total number of pages to query.
+            for(String key : results.keySet()){
+                if(key.equals('total_pages')){
+                    System.debug(LoggingLevel.DEBUG, 'Total number of pages = ' + results.get(key));
+                }
             }
-            System.debug(LoggingLevel.DEBUG, moviesList.size());            
         }else{
             //handle error
 
         }
 
+        //now iterate all pages to get all popular movies.
+        for(Integer page = 1 ; page <= PAGES ; page++ ){
+            System.debug(LoggingLevel.DEBUG, page);
+            HttpRequest request = new HttpRequest();            
+            request.setEndpoint('https://api.themoviedb.org/3/movie/popular?api_key=14f3a773746ea1d08c5ba9df6472cdde&language=en-US&page=' + page);
+            request.setMethod('GET');        
+            request.setTimeout(60000);
+            HttpResponse response = new Http().send(request);
+            PopularMovies movies = PopularMovies.parse(response.getBody());
+            for(PopularMovies.Results result : movies.results){
+                moviesList.add(result);
+            } 
+            System.debug(LoggingLevel.DEBUG, moviesList.size());                       
+        }
 
         //display the results
         for(PopularMovies.Results data : moviesList){
@@ -57,6 +73,27 @@ public with sharing class GetPopularMoviesServiceImpl extends MoviesService{
             movie.video__c = data.video;
             movie.vote_average__c = data.vote_average;
             movie.vote_count__c = data.vote_count;
+            genreData = '';
+            //check for null for genres
+            if(data.genre_ids.size() > 0){
+                //populate the genre map
+                for(Genre__c g : genreList){
+                    genreMap.put(g.Genre_Id__c, g.Name);
+                }
+                //decode
+                for(Integer genreId : data.genre_ids){
+                    genreData = genreData + genreMap.get(genreId) + ',';
+                }
+                //remove the last comma from the string
+                Integer lengthOfData = genreData.length();
+                Integer lastIndexOfComma = genreData.indexOf(',', lengthOfData-1);
+                if(lastIndexOfComma != -1){
+                    genreData = genreData.left(lengthOfData-1);
+                }                
+                System.debug(LoggingLevel.DEBUG, genreData);
+            }
+            movie.Genre__c = genreData;
+
             System.debug(LoggingLevel.DEBUG, data.id);
             System.debug(LoggingLevel.DEBUG, data.overview);
             System.debug(LoggingLevel.DEBUG, data.poster_path);

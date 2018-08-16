@@ -3,6 +3,15 @@ public with sharing class GetPopularMoviesServiceImpl extends MoviesService{
     List<PopularMovies.Results> moviesList = new List<PopularMovies.Results>();
     List<Movie__c> popularMoviesList = new List<Movie__c>();
     final Integer PAGES = 10;
+    //get a list of all genres to decode fromthe API.
+    List<Genre__c> genreList = [SELECT Id, Name, Genre_Id__c from Genre__c];
+    Map<Decimal, String> genreMap = new Map<Decimal, String>();
+    //List to capture the genres from the API.
+    List<Integer> genreIds = new List<Integer>();
+    String genreData = '';
+
+
+
     public override String GetMovies(){
         System.debug(System.LoggingLevel.DEBUG, 'GetPopularMovies.GetMovies()');
 
@@ -64,6 +73,27 @@ public with sharing class GetPopularMoviesServiceImpl extends MoviesService{
             movie.video__c = data.video;
             movie.vote_average__c = data.vote_average;
             movie.vote_count__c = data.vote_count;
+            genreData = '';
+            //check for null for genres
+            if(data.genre_ids.size() > 0){
+                //populate the genre map
+                for(Genre__c g : genreList){
+                    genreMap.put(g.Genre_Id__c, g.Name);
+                }
+                //decode
+                for(Integer genreId : data.genre_ids){
+                    genreData = genreData + genreMap.get(genreId) + ',';
+                }
+                //remove the last comma from the string
+                Integer lengthOfData = genreData.length();
+                Integer lastIndexOfComma = genreData.indexOf(',', lengthOfData-1);
+                if(lastIndexOfComma != -1){
+                    genreData = genreData.left(lengthOfData-1);
+                }                
+                System.debug(LoggingLevel.DEBUG, genreData);
+            }
+            movie.Genre__c = genreData;
+
             System.debug(LoggingLevel.DEBUG, data.id);
             System.debug(LoggingLevel.DEBUG, data.overview);
             System.debug(LoggingLevel.DEBUG, data.poster_path);

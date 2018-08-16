@@ -29,6 +29,9 @@
         <members>Movie__c.Backdrop__c</members>
         <members>Movie__c.Genre__c</members>
         <members>Movie__c.Homepage__c</members>
+        <members>Movie__c.Now_Playing_End_Date__c</members>
+        <members>Movie__c.Now_Playing_Start_Date__c</members>
+        <members>Movie__c.Now_Playing__c</members>
         <members>Movie__c.Overview__c</members>
         <members>Movie__c.Poster__c</members>
         <members>Movie__c.Rating__c</members>

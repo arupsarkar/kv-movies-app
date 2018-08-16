@@ -2,12 +2,13 @@ project:
     name: kv-movies
     package:
         name:  kv_movies
+        namespace: kv_movies
         api_version: '42.0'
     git: 
         default_branch: master
         prefix_feature: feature/
         prefix_beta: beta/
         prefix_release: release/
+        repo_url: https://github.com/arupsarkar/kv-movies-app
     test:
-        name_match: _TEST%
-    
+        name_match: '%_TEST%'

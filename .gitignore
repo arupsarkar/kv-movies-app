@@ -9,3 +9,8 @@ kv-movies-app.sublime-workspace
 .sfdx
 .vscode
 .DS_Store
+test_results.json
+test_results.xml
+node_modules
+package.json
+package-lock.json

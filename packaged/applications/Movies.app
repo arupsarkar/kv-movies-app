@@ -10,11 +10,14 @@
     <formFactors>Large</formFactors>
     <label>Movies</label>
     <navType>Standard</navType>
-    <tabs>standard-home</tabs>
-    <tabs>standard-Feed</tabs>
+    <tabs>standard-Dashboard</tabs>
+    <tabs>standard-report</tabs>
     <tabs>Movie__c</tabs>
     <tabs>standard-Contact</tabs>
     <tabs>Genre__c</tabs>
+    <tabs>standard-Feed</tabs>
+    <tabs>Interest__c</tabs>
+    <tabs>Contact_Movies__c</tabs>
     <uiType>Lightning</uiType>
     <utilityBar>Movies_UtilityBar</utilityBar>
 </CustomApplication>

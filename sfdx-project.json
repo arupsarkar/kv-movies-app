@@ -17,5 +17,6 @@
         "kv_movies": "0Hof2000000XZAbCAO"
     },
     "namespace": "kv_movies",
-    "oauthLocalPort" : "1717"
+    "oauthLocalPort": "1717",
+    "sfdcLoginUrl": "https://firefly-serenity-352690.my.salesforce.com"
 }

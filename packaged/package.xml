@@ -10,6 +10,7 @@
         <members>GetPopularMoviesServiceImpl</members>
         <members>Movies</members>
         <members>MoviesApplication</members>
+        <members>MoviesClient</members>
         <members>MoviesConsumer</members>
         <members>MoviesService</members>
         <members>MoviesServiceDI_TEST</members>
@@ -21,6 +22,10 @@
         <name>ApexClass</name>
     </types>
     <types>
+        <members>Poster_Image</members>
+        <name>AuraDefinitionBundle</name>
+    </types>
+    <types>
         <members>OldMovies_icon</members>
         <name>ContentAsset</name>
     </types>
@@ -29,7 +34,11 @@
         <name>CustomApplication</name>
     </types>
     <types>
+        <members>Contact_Movies__c.Contact__c</members>
+        <members>Contact_Movies__c.Movie__c</members>
         <members>Genre__c.genre_id__c</members>
+        <members>Interest__c.Contact__c</members>
+        <members>Interest__c.Genre__c</members>
         <members>Movie__c.Backdrop__c</members>
         <members>Movie__c.Genre__c</members>
         <members>Movie__c.Homepage__c</members>
@@ -56,26 +65,40 @@
         <name>CustomField</name>
     </types>
     <types>
+        <members>Contact_Movies__c</members>
         <members>Genre__c</members>
+        <members>Interest__c</members>
         <members>Movie__c</members>
         <name>CustomObject</name>
     </types>
     <types>
+        <members>Contact_Movies__c</members>
         <members>Genre__c</members>
+        <members>Interest__c</members>
         <members>Movie__c</members>
         <name>CustomTab</name>
     </types>
     <types>
+        <members>Movies_Dashboard</members>
+        <members>Movies_Dashboard/znHRqnVcCbNVfKKYKsjferlFhlwJKd</members>
+        <name>Dashboard</name>
+    </types>
+    <types>
+        <members>Movies_List</members>
         <members>Movies_UtilityBar</members>
         <name>FlexiPage</name>
     </types>
     <types>
+        <members>Contact_Movies__c-Contact Movie Layout</members>
         <members>Genre__c-Genre Layout</members>
+        <members>Interest__c-Interest Layout</members>
         <members>Movie__c-Movie Layout</members>
         <name>Layout</name>
     </types>
     <types>
+        <members>Contact_Movies__c.All</members>
         <members>Genre__c.All</members>
+        <members>Interest__c.All</members>
         <members>Movie__c.All</members>
         <members>Movie__c.Now_Playing</members>
         <members>Movie__c.Popular_Movies</members>
@@ -85,6 +108,20 @@
         <members>Movies App Standard User</members>
         <members>Movies App System Administrator</members>
         <name>Profile</name>
+    </types>
+    <types>
+        <members>AMCSandbox</members>
+        <members>ApexDevNet</members>
+        <members>The_Movie_Database</members>
+        <name>RemoteSiteSetting</name>
+    </types>
+    <types>
+        <members>Movie_Reports</members>
+        <members>Movie_Reports/New_Movies_Report_0lt</members>
+        <members>Movie_Reports/New_Movies_Report_B4o</members>
+        <members>Movie_Reports/New_Movies_Report_ocb</members>
+        <members>Movie_Reports/Popular_Movies_Group_by_Language</members>
+        <name>Report</name>
     </types>
     <version>42.0</version>
 </Package>

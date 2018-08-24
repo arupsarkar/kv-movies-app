@@ -12,3 +12,8 @@ project:
         repo_url: https://github.com/arupsarkar/kv-movies-app
     test:
         name_match: '%_TEST%'
+    flows:
+        dependencies:
+            tasks:
+                1:
+                    task: None
